@@ -7,4 +7,4 @@ RUN apt-get update -qqy
 RUN apt-get -qqy install google-chrome-stable
 
 ENV REFRESHED_AT 2017-06-08
-RUN apt update -qqy && apt upgrade -qqy
+RUN apt-get update -qqy && apt-get upgrade -qqy
