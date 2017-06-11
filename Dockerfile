@@ -6,5 +6,5 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 RUN apt-get update -qqy
 RUN apt-get -qqy install google-chrome-stable
 
-ENV REFRESHED_AT 2017-06-08
+ENV REFRESHED_AT 2017-06-11
 RUN apt-get update -qqy && apt-get upgrade -qqy
