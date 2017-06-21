@@ -1,6 +1,6 @@
 # Node.js with Chrome stable Dockerfile
 
-A minimal Dockerfile based on Node.js 6 LTS (Boron) branch (regular or slim) with the stable Chrome installed.
+A minimal Dockerfile based on Node.js 6 LTS (Boron) branch (regular, slim or alpine) with the stable Chrome installed.
 
 ## What's included
 
