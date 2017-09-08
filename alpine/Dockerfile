@@ -1,8 +1,10 @@
 FROM node:6-alpine
 LABEL maintainer "Tim Brust <tim.brust@sinnerschrader.com>"
 
-ENV REFRESHED_AT 2017-08-14
+ENV REFRESHED_AT 2017-09-08
 
 RUN sed -i -e 's/v3\.4/edge/g' /etc/apk/repositories
-RUN apk update && apk upgrade
-RUN apk add chromium udev ttf-freefont
+RUN apk add --no-cache \
+  chromium \
+  udev \
+  ttf-freefont
