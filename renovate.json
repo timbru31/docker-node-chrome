@@ -1,0 +1,12 @@
+
+{
+  "extends": [
+    "config:base",
+    ":automergeDigest",
+    ":automergePatch",
+    ":automergeMinor",
+    ":automergePr",
+    ":docker",
+    ":skipStatusChecks"
+  ]
+}
