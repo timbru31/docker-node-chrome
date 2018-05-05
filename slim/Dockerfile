@@ -1,4 +1,4 @@
-FROM node:carbon-slim@sha256:3120aa2e44ef823d78d6d231ea9ee45fac86b6c249e635c601d4194c424ce0e9
+FROM node:carbon-slim@sha256:44e355402c0fe189f27658a4e61b7567b37a92dcfdd25ee2afd55661be89da82
 LABEL maintainer "Tim Brust <tim.brust@sinnerschrader.com>"
 
 ARG REFRESHED_AT
