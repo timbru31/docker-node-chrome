@@ -8,4 +8,5 @@ RUN sed -i -e 's/v3\.8/edge/g' /etc/apk/repositories
 RUN apk add --no-cache \
   chromium \
   udev \
-  ttf-freefont
+  ttf-freefont \
+  libc6-compat
