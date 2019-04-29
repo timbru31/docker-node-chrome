@@ -8,4 +8,7 @@ RUN echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/r
   echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories && \
   apk add --no-cache \
   chromium@edge \
-  harfbuzz@edge
+  nss@edge \
+  freetype@edge \
+  harfbuzz@edge \
+  ttf-freefont@edge
