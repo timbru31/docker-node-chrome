@@ -1,4 +1,4 @@
-FROM node:dubnium-slim@sha256:e97c41448f25af5838d6f50c76c3c2214b991b4a41b7e29c2c074fa3968da61c
+FROM node:dubnium-slim@sha256:465b12d4a542a574320957fb794aa2a5232e010a8075bca9fdbac675fa116ecb
 LABEL maintainer "Tim Brust <tim.brust@sinnerschrader.com>"
 
 ARG REFRESHED_AT
