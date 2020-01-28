@@ -6,7 +6,9 @@ ENV REFRESHED_AT $REFRESHED_AT
 
 # hadolint ignore=DL3009
 RUN apt-get update -qq && apt-get install -qq --no-install-recommends \
-    wget
+    wget \
+    gnupg2 \
+    ca-certificates
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
