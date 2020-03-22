@@ -9,9 +9,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build the Docker image
         run: |
-          docker run -i $(docker build -q 10) /bin/sh -c "node --version && google-chrome --version"
-          docker run -i $(docker build -q 10/slim) /bin/sh -c "node --version && google-chrome --version"
-          docker run -i $(docker build -q 10/alpine) /bin/sh -c "node --version && chromium-browser --version"
-          docker run -i $(docker build -q 12) /bin/sh -c "node --version && google-chrome --version"
-          docker run -i $(docker build -q 12/slim) /bin/sh -c "node --version && google-chrome --version"
-          docker run -i $(docker build -q 12/alpine) /bin/sh -c "node --version && chromium-browser --version"
+          docker run -i $(docker build -q 10) /bin/sh -c "node --version && google-chrome --version && google-chrome --headless --no-sandbox --disable-gpu --screenshot https://github.com"
+          docker run -i $(docker build -q 10/slim) /bin/sh -c "node --version && google-chrome --version && google-chrome --headless --no-sandbox --disable-gpu --screenshot https://github.com"
+          docker run -i $(docker build -q 10/alpine) /bin/sh -c "node --version && chromium-browser --version && chromium-browser --headless --no-sandbox --disable-gpu --screenshot https://github.com"
+          docker run -i $(docker build -q 12) /bin/sh -c "node --version && google-chrome --version && google-chrome --headless --no-sandbox --disable-gpu --screenshot https://github.com"
+          docker run -i $(docker build -q 12/slim) /bin/sh -c "node --version && google-chrome --version && google-chrome --headless --no-sandbox --disable-gpu --screenshot https://github.com"
+          docker run -i $(docker build -q 12/alpine) /bin/sh -c "node --version && chromium-browser --version && chromium-browser --headless --no-sandbox --disable-gpu --screenshot https://github.com"
