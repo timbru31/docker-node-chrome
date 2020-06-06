@@ -9,8 +9,7 @@ A minimal Dockerfile based on Node.js 10 LTS (Dubnium) or Node.js 12 LTS (Erbium
 ## What's included
 
 - Node.js 10 or Node.js 12
-- npm 6
-- yarn
+- npm
 - Chrom(e|ium) stable
 
 ## Available platforms
