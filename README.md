@@ -19,7 +19,6 @@ These Dockerfiles leverage the new `buildx` functionality and offer the followin
 - linux/amd64
 - linux/arm64 (not on regular and slim)
 - linux/arm/v7 (not on alpine)
-- linux/s390x (not on alpine)
 
 ---
 
