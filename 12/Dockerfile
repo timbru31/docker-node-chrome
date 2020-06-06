@@ -1,5 +1,5 @@
-FROM node:erbium@sha256:bdbd56e0650a22665cd1d8401152b1c59efb0574ec950241100f866b899718ba
-LABEL maintainer "Tim Brust <tim.brust@sinnerschrader.com>"
+FROM node:erbium
+LABEL maintainer "Tim Brust <github@timbrust.de>"
 
 ARG REFRESHED_AT
 ENV REFRESHED_AT $REFRESHED_AT

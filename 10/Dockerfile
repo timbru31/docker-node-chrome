@@ -1,5 +1,5 @@
-FROM node:dubnium@sha256:0b9c8fcfcd762b8374676e136660453e1dfb1a12509bd5c033ff462fd6145072
-LABEL maintainer "Tim Brust <tim.brust@sinnerschrader.com>"
+FROM node:dubnium
+LABEL maintainer "Tim Brust <github@timbrust.de>"
 
 ARG REFRESHED_AT
 ENV REFRESHED_AT $REFRESHED_AT

@@ -1,12 +1,11 @@
-
 {
   "extends": [
     "config:base",
-    ":automergeDigest",
+    ":disableRenovate",
+    ":pinDigestsDisabled",
     ":automergePatch",
     ":automergeMinor",
     ":automergePr",
-    ":docker",
-    ":skipStatusChecks"
+    ":docker"
   ]
 }
