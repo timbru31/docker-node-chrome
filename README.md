@@ -17,7 +17,7 @@ A minimal Dockerfile based on Node.js 10 LTS (Dubnium) or Node.js 12 LTS (Erbium
 
 These Dockerfiles leverage the new `buildx` functionality and offer the following platforms:
 - linux/amd64
-- linux/arm64
+- linux/arm64 (not on regular and slim)
 - linux/arm/v7 (not on alpine)
 - linux/ppc64le (not on alpine)
 - linux/s390x (not on alpine)
