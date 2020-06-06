@@ -20,7 +20,7 @@ jobs:
               platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7
             - path: 10/alpine
               tags: 10-alpine,dubnium-alpine
-              platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/386,linux/arm/v7,linux/arm/v6
+              platforms: linux/amd64,linux/arm64
             - path: 12
               tags: 12,erbium,latest
               platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7
@@ -29,7 +29,7 @@ jobs:
               platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7
             - path: 12/alpine
               tags: 12-alpine,erbium-alpine,alpine
-              platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/386,linux/arm/v7,linux/arm/v6
+              platforms: linux/amd64,linux/arm64
 
     steps:
       - name: Checkout
