@@ -2,7 +2,7 @@
 
 [![Docker Automated build](https://img.shields.io/docker/automated/timbru31/node-chrome.svg)](https://hub.docker.com/r/timbru31/node-chrome/)
 [![buildx Status](https://github.com/timbru31/docker-node-chrome/workflows/buildx/badge.svg)](https://github.com/timbru31/docker-node-chrome/actions?query=workflow%3Abuildx)
-[![Build Status](https://travis-ci.org/timbru31/docker-node-chrome.svg?branch=master)](https://travis-ci.org/timbru31/docker-node-chrome)
+[![Lint Dockerfiles](https://github.com/timbru31/docker-node-chrome/workflows/Lint%20Dockerfiles/badge.svg)](https://github.com/timbru31/docker-node-chrome/actions?query=workflow%3A%22Lint+Dockerfiles%22)
 
 A minimal Dockerfile based on Node.js 10 LTS (Dubnium) or Node.js 12 LTS (Erbium) branch (regular, slim or alpine) with the stable Chrom(e|ium) installed.
 
