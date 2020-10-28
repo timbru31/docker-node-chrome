@@ -8,7 +8,8 @@ ENV REFRESHED_AT $REFRESHED_AT
 RUN apt-get update -qq && apt-get install -qq --no-install-recommends \
     wget \
     gnupg2 \
-    ca-certificates
+    ca-certificates \
+    apt-transport-https
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
