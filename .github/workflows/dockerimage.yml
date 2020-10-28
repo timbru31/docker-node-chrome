@@ -15,3 +15,6 @@ jobs:
           docker run -i $(docker build -q 12) /bin/sh -c "node --version && google-chrome --version && google-chrome --headless --no-sandbox --disable-gpu --screenshot https://github.com"
           docker run -i $(docker build -q 12/slim) /bin/sh -c "node --version && google-chrome --version && google-chrome --headless --no-sandbox --disable-gpu --screenshot https://github.com"
           docker run -i $(docker build -q 12/alpine) /bin/sh -c "node --version && chromium-browser --version && chromium-browser --headless --no-sandbox --disable-gpu --screenshot https://github.com"
+          docker run -i $(docker build -q 14) /bin/sh -c "node --version && google-chrome --version && google-chrome --headless --no-sandbox --disable-gpu --screenshot https://github.com"
+          docker run -i $(docker build -q 14/slim) /bin/sh -c "node --version && google-chrome --version && google-chrome --headless --no-sandbox --disable-gpu --screenshot https://github.com"
+          docker run -i $(docker build -q 14/alpine) /bin/sh -c "node --version && chromium-browser --version && chromium-browser --headless --no-sandbox --disable-gpu --screenshot https://github.com"

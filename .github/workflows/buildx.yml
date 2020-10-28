@@ -22,13 +22,22 @@ jobs:
             tags: 10-alpine,dubnium-alpine
             platforms: linux/amd64,linux/arm64
           - path: 12
-            tags: 12,erbium,latest
+            tags: 12,erbium
             platforms: linux/amd64
           - path: 12/slim
-            tags: 12-slim,erbium-slim,slim
+            tags: 12-slim,erbium-slim
             platforms: linux/amd64
           - path: 12/alpine
-            tags: 12-alpine,erbium-alpine,alpine
+            tags: 12-alpine,erbium-alpine
+            platforms: linux/amd64,linux/arm64
+          - path: 14
+            tags: 14,fermium,latest
+            platforms: linux/amd64
+          - path: 14/slim
+            tags: 14-slim,fermium-slim,slim
+            platforms: linux/amd64
+          - path: 14/alpine
+            tags: 14-alpine,fermium-alpine,alpine
             platforms: linux/amd64,linux/arm64
 
     steps:
