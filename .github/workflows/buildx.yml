@@ -14,31 +14,39 @@ jobs:
       matrix:
         docker-file:
           - path: 10
-            tags: 10,dubnium
+            tags: "10 dubnium"
             platforms: linux/amd64
+
           - path: 10/slim
-            tags: 10-slim,dubnium-slim
+            tags: "10-slim dubnium-slim"
             platforms: linux/amd64
+
           - path: 10/alpine
-            tags: 10-alpine,dubnium-alpine
+            tags: "10-alpine dubnium-alpine"
             platforms: linux/amd64,linux/arm64
+
           - path: 12
-            tags: 12,erbium
+            tags: "12 erbium"
             platforms: linux/amd64
+
           - path: 12/slim
-            tags: 12-slim,erbium-slim
+            tags: "12-slim erbium-slim"
             platforms: linux/amd64
+
           - path: 12/alpine
-            tags: 12-alpine,erbium-alpine
+            tags: "12-alpine erbium-alpine"
             platforms: linux/amd64,linux/arm64
+
           - path: 14
-            tags: 14,fermium,latest
+            tags: "14 fermium latest"
             platforms: linux/amd64
+
           - path: 14/slim
-            tags: 14-slim,fermium-slim,slim
+            tags: "14-slim fermium-slim slim"
             platforms: linux/amd64
+
           - path: 14/alpine
-            tags: 14-alpine,fermium-alpine,alpine
+            tags: "14-alpine fermium-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
     steps:
@@ -50,12 +58,17 @@ jobs:
         run: |
           DOCKER_IMAGE=timbru31/node-chrome
 
-          TAGZ=$(echo ${{ matrix.docker-file.tags }} | tr "," "\n")
+          TEMP="${{ matrix.docker-file.tags }}"
+          TAGZ=($TEMP)
           VERSION=${TAGZ[0]}
 
-          for tag in $TAGZ
-          do
-            TAGS="${TAGS},${DOCKER_IMAGE}:${tag}"
+          for i in "${!TAGZ[@]}"; do
+            if [ "$i" -eq "0" ];
+            then
+              TAGS="${DOCKER_IMAGE}:${TAGZ[$i]}"
+            else
+              TAGS="${TAGS},${DOCKER_IMAGE}:${TAGZ[$i]}"
+            fi
           done
 
           echo ::set-output name=docker_image::${DOCKER_IMAGE}
@@ -103,10 +116,10 @@ jobs:
           platforms: ${{ matrix.docker-file.platforms }}
           tags: ${{ steps.prepare.outputs.tags }}
 
-      - name: Docker Check Manifest
-        if: always() && github.event_name != 'pull_request'
+      - name: Inspect Image
+        if: always() && github.event_name != 'pull_request' && contains(github.ref, 'master')
         run: |
-          docker run --rm mplatform/mquery ${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }}
+          docker buildx imagetools inspect ${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }}
 
       - name: Clear
         if: always() && github.event_name != 'pull_request'
