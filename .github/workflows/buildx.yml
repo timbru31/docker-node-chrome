@@ -13,18 +13,6 @@ jobs:
       fail-fast: false
       matrix:
         docker-file:
-          - path: 10
-            tags: "10 dubnium"
-            platforms: linux/amd64
-
-          - path: 10/slim
-            tags: "10-slim dubnium-slim"
-            platforms: linux/amd64
-
-          - path: 10/alpine
-            tags: "10-alpine dubnium-alpine"
-            platforms: linux/amd64,linux/arm64
-
           - path: 12
             tags: "12 erbium"
             platforms: linux/amd64
