@@ -1,4 +1,4 @@
-FROM node:16-slim
+FROM node:gallium-slim
 LABEL maintainer "Tim Brust <github@timbrust.de>"
 
 ARG REFRESHED_AT
