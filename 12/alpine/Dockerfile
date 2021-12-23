@@ -13,4 +13,5 @@ RUN echo @edge https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/
     freetype@edge \
     harfbuzz@edge \
     ttf-freefont@edge \
-    libstdc++@edge
+    libstdc++@edge \
+    wayland@edge
