@@ -14,4 +14,6 @@ RUN echo @edge https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/
     harfbuzz@edge \
     ttf-freefont@edge \
     libstdc++@edge \
+    wayland-libs-cursor@edge \
+    wayland-libs-egl@edge \
     wayland@edge
