@@ -9,7 +9,7 @@ A minimal Dockerfile based on Node.js 12 LTS (Erbium), Node.js 14 LTS (Fermium) 
 ## What's included
 
 - Node.js 12 LTS, Node.js 14 LTS or Node.js 16
-- npm 6 (< Node.js 16) or npm 7 (Node.js 16)
+- npm 6 (< Node.js 16) or npm 8 (Node.js 16)
 - yarn
 - Chrom(e|ium) stable
 
