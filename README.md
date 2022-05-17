@@ -4,7 +4,7 @@
 [![buildx Status](https://github.com/timbru31/docker-node-chrome/workflows/buildx/badge.svg)](https://github.com/timbru31/docker-node-chrome/actions?query=workflow%3Abuildx)
 [![Lint Dockerfiles](https://github.com/timbru31/docker-node-chrome/workflows/Lint%20Dockerfiles/badge.svg)](https://github.com/timbru31/docker-node-chrome/actions?query=workflow%3A%22Lint+Dockerfiles%22)
 
-A minimal Dockerfile based on Node.js 14 LTS (Fermium) or Node.js 16 (Gallium) branch (regular, slim or alpine) with the stable Chrom(e|ium) installed.
+A minimal Dockerfile based on Node.js 14 LTS (Fermium) or Node.js 16 LTS (Gallium) branch (regular, slim or alpine) with the stable Chrom(e|ium) installed.
 
 ## What's included
 
