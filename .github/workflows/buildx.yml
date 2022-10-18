@@ -14,27 +14,39 @@ jobs:
       matrix:
         docker-file:
           - path: 14
-            tags: "14 fermium latest"
+            tags: "14 fermium"
             platforms: linux/amd64
 
           - path: 14/slim
-            tags: "14-slim fermium-slim slim"
+            tags: "14-slim fermium-slim"
             platforms: linux/amd64
 
           - path: 14/alpine
-            tags: "14-alpine fermium-alpine alpine"
+            tags: "14-alpine fermium-alpine"
             platforms: linux/amd64,linux/arm64
 
           - path: 16
-            tags: "16 gallium"
+            tags: "16 gallium latest"
             platforms: linux/amd64
 
           - path: 16/slim
-            tags: "16-slim gallium-slim"
+            tags: "16-slim gallium-slim slim"
             platforms: linux/amd64
 
           - path: 16/alpine
-            tags: "16-alpine gallium-alpine"
+            tags: "16-alpine gallium-alpine alpine"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 18
+            tags: "18 hydrogen"
+            platforms: linux/amd64
+
+          - path: 18/slim
+            tags: "18-slim hydrogen-slim"
+            platforms: linux/amd64
+
+          - path: 18/alpine
+            tags: "18-alpine hydrogen-alpine"
             platforms: linux/amd64,linux/arm64
 
     steps:
