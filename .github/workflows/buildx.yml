@@ -26,27 +26,27 @@ jobs:
             platforms: linux/amd64,linux/arm64
 
           - path: 16
-            tags: "16 gallium latest"
+            tags: "16 gallium"
             platforms: linux/amd64
 
           - path: 16/slim
-            tags: "16-slim gallium-slim slim"
+            tags: "16-slim gallium-slim"
             platforms: linux/amd64
 
           - path: 16/alpine
-            tags: "16-alpine gallium-alpine alpine"
+            tags: "16-alpine gallium-alpine"
             platforms: linux/amd64,linux/arm64
 
           - path: 18
-            tags: "18 hydrogen"
+            tags: "18 hydrogen latest"
             platforms: linux/amd64
 
           - path: 18/slim
-            tags: "18-slim hydrogen-slim"
+            tags: "18-slim hydrogen-slim slim"
             platforms: linux/amd64
 
           - path: 18/alpine
-            tags: "18-alpine hydrogen-alpine"
+            tags: "18-alpine hydrogen-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
     steps:
