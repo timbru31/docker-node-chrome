@@ -15,11 +15,11 @@ jobs:
         docker-file:
           - path: 14
             tags: "14 fermium"
-            platforms: linux/amd64
+            platforms: linux/amd64,linux/arm64
 
           - path: 14/slim
             tags: "14-slim fermium-slim"
-            platforms: linux/amd64
+            platforms: linux/amd64,linux/arm64
 
           - path: 14/alpine
             tags: "14-alpine fermium-alpine"
@@ -27,11 +27,11 @@ jobs:
 
           - path: 16
             tags: "16 gallium"
-            platforms: linux/amd64
+            platforms: linux/amd64,linux/arm64
 
           - path: 16/slim
             tags: "16-slim gallium-slim"
-            platforms: linux/amd64
+            platforms: linux/amd64,linux/arm64
 
           - path: 16/alpine
             tags: "16-alpine gallium-alpine"
@@ -39,11 +39,11 @@ jobs:
 
           - path: 18
             tags: "18 hydrogen latest"
-            platforms: linux/amd64
+            platforms: linux/amd64,linux/arm64
 
           - path: 18/slim
             tags: "18-slim hydrogen-slim slim"
-            platforms: linux/amd64
+            platforms: linux/amd64,linux/arm64
 
           - path: 18/alpine
             tags: "18-alpine hydrogen-alpine alpine"
