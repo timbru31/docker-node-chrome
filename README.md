@@ -18,7 +18,7 @@ A minimal Dockerfile based on Node.js 14 LTS (Fermium), Node.js 16 LTS (Gallium)
 These Dockerfiles leverage the new `buildx` functionality and offer the following platforms:
 
 - linux/amd64
-- linux/arm64 (not on regular and slim)
+- linux/arm64
 
 ---
 
