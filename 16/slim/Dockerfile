@@ -10,4 +10,5 @@ RUN apt-get update -qq \
   && apt-get install -qq --no-install-recommends \
     chromium \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
+  && ln -s /usr/bin/chromium /usr/bin/google-chrome
