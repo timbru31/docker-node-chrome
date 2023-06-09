@@ -1,6 +1,12 @@
 name: Test Docker image
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+
 
 jobs:
   build:
@@ -15,3 +21,17 @@ jobs:
           docker run -i $(docker build -q 18) /bin/sh -c "node --version && npm --version && chromium --version && chromium --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
           docker run -i $(docker build -q 18/slim) /bin/sh -c "node --version && npm --version && chromium --version && chromium --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
           docker run -i $(docker build -q 18/alpine) /bin/sh -c "node --version && npm --version && chromium-browser --version && chromium-browser --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
+
+  auto-merge:
+    runs-on: ubuntu-latest
+    needs: build
+
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Automatically merge dependabot upgrades
+        uses: fastify/github-action-merge-dependabot@v3
+        with:
+          target: minor
