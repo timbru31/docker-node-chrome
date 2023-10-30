@@ -39,6 +39,18 @@ jobs:
             tags: "18-alpine hydrogen-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
+          - path: 20
+            tags: "20 iron latest"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 20/slim
+            tags: "20-slim iron-slim slim"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 20/alpine
+            tags: "20-alpine iron-alpine alpine"
+            platforms: linux/amd64,linux/arm64
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
