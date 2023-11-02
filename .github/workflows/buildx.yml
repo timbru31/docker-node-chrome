@@ -28,15 +28,27 @@ jobs:
             platforms: linux/amd64,linux/arm64
 
           - path: 18
-            tags: "18 hydrogen latest"
+            tags: "18 hydrogen"
             platforms: linux/amd64,linux/arm64
 
           - path: 18/slim
-            tags: "18-slim hydrogen-slim slim"
+            tags: "18-slim hydrogen-slim"
             platforms: linux/amd64,linux/arm64
 
           - path: 18/alpine
-            tags: "18-alpine hydrogen-alpine alpine"
+            tags: "18-alpine hydrogen-alpine"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 20
+            tags: "20 iron latest"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 20/slim
+            tags: "20-slim iron-slim slim"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 20/alpine
+            tags: "20-alpine iron-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
     steps:
