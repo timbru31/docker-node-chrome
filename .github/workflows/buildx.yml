@@ -28,15 +28,15 @@ jobs:
             platforms: linux/amd64,linux/arm64
 
           - path: 18
-            tags: "18 hydrogen latest"
+            tags: "18 hydrogen"
             platforms: linux/amd64,linux/arm64
 
           - path: 18/slim
-            tags: "18-slim hydrogen-slim slim"
+            tags: "18-slim hydrogen-slim"
             platforms: linux/amd64,linux/arm64
 
           - path: 18/alpine
-            tags: "18-alpine hydrogen-alpine alpine"
+            tags: "18-alpine hydrogen-alpine"
             platforms: linux/amd64,linux/arm64
 
           - path: 20
