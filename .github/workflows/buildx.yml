@@ -15,18 +15,6 @@ jobs:
       fail-fast: false
       matrix:
         docker-file:
-          - path: 16
-            tags: "16 gallium"
-            platforms: linux/amd64,linux/arm64
-
-          - path: 16/slim
-            tags: "16-slim gallium-slim"
-            platforms: linux/amd64,linux/arm64
-
-          - path: 16/alpine
-            tags: "16-alpine gallium-alpine"
-            platforms: linux/amd64,linux/arm64
-
           - path: 18
             tags: "18 hydrogen"
             platforms: linux/amd64,linux/arm64
