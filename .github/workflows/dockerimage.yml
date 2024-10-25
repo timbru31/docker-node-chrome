@@ -22,6 +22,9 @@ jobs:
           docker run -i $(docker build -q 20) /bin/sh -c "node --version && npm --version && chromium --version && chromium --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
           docker run -i $(docker build -q 20/slim) /bin/sh -c "node --version && npm --version && chromium --version && chromium --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
           docker run -i $(docker build -q 20/alpine) /bin/sh -c "node --version && npm --version && chromium-browser --version && chromium-browser --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
+          docker run -i $(docker build -q 22) /bin/sh -c "node --version && npm --version && chromium --version && chromium --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
+          docker run -i $(docker build -q 22/slim) /bin/sh -c "node --version && npm --version && chromium --version && chromium --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
+          docker run -i $(docker build -q 22/alpine) /bin/sh -c "node --version && npm --version && chromium-browser --version && chromium-browser --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/"
 
   auto-merge:
     runs-on: ubuntu-latest

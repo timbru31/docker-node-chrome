@@ -39,6 +39,18 @@ jobs:
             tags: "20-alpine iron-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
+          - path: 22
+            tags: "22 jod"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 22/slim
+            tags: "22-slim jod-slim"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 22/alpine
+            tags: "22-alpine jod-alpine"
+            platforms: linux/amd64,linux/arm64
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
