@@ -28,27 +28,27 @@ jobs:
             platforms: linux/amd64,linux/arm64
 
           - path: 20
-            tags: "20 iron latest"
+            tags: "20 iron"
             platforms: linux/amd64,linux/arm64
 
           - path: 20/slim
-            tags: "20-slim iron-slim slim"
+            tags: "20-slim iron-slim"
             platforms: linux/amd64,linux/arm64
 
           - path: 20/alpine
-            tags: "20-alpine iron-alpine alpine"
+            tags: "20-alpine iron-alpine"
             platforms: linux/amd64,linux/arm64
 
           - path: 22
-            tags: "22 jod"
+            tags: "22 jod latest"
             platforms: linux/amd64,linux/arm64
 
           - path: 22/slim
-            tags: "22-slim jod-slim"
+            tags: "22-slim jod-slim slim"
             platforms: linux/amd64,linux/arm64
 
           - path: 22/alpine
-            tags: "22-alpine jod-alpine"
+            tags: "22-alpine jod-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
     steps:
