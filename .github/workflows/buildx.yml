@@ -15,18 +15,6 @@ jobs:
       fail-fast: false
       matrix:
         docker-file:
-          - path: 18
-            tags: "18 hydrogen"
-            platforms: linux/amd64,linux/arm64
-
-          - path: 18/slim
-            tags: "18-slim hydrogen-slim"
-            platforms: linux/amd64,linux/arm64
-
-          - path: 18/alpine
-            tags: "18-alpine hydrogen-alpine"
-            platforms: linux/amd64,linux/arm64
-
           - path: 20
             tags: "20 iron"
             platforms: linux/amd64,linux/arm64
