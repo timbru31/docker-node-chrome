@@ -39,6 +39,18 @@ jobs:
             tags: "22-alpine jod-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
+          - path: 24
+            tags: "24 krypton"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 24/slim
+            tags: "24-slim krypton-slim"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 24/alpine
+            tags: "24-alpine krypton-alpine"
+            platforms: linux/amd64,linux/arm64
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
