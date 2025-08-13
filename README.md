@@ -12,6 +12,7 @@ A minimal Dockerfile based on Node.js 20 LTS (Iron) or Node.js 22 LTS (Jod) bran
 - npm 10
 - yarn
 - Chromium stable
+- curl
 
 ### Available platforms
 
