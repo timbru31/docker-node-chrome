@@ -15,40 +15,28 @@ jobs:
       fail-fast: false
       matrix:
         docker-file:
-          - path: 20
-            tags: "20 iron"
-            platforms: linux/amd64,linux/arm64
-
-          - path: 20/slim
-            tags: "20-slim iron-slim"
-            platforms: linux/amd64,linux/arm64
-
-          - path: 20/alpine
-            tags: "20-alpine iron-alpine"
-            platforms: linux/amd64,linux/arm64
-
           - path: 22
-            tags: "22 jod latest"
+            tags: "22 jod"
             platforms: linux/amd64,linux/arm64
 
           - path: 22/slim
-            tags: "22-slim jod-slim slim"
+            tags: "22-slim jod-slim"
             platforms: linux/amd64,linux/arm64
 
           - path: 22/alpine
-            tags: "22-alpine jod-alpine alpine"
+            tags: "22-alpine jod-alpine"
             platforms: linux/amd64,linux/arm64
 
           - path: 24
-            tags: "24 krypton"
+            tags: "24 krypton latest"
             platforms: linux/amd64,linux/arm64
 
           - path: 24/slim
-            tags: "24-slim krypton-slim"
+            tags: "24-slim krypton-slim slim"
             platforms: linux/amd64,linux/arm64
 
           - path: 24/alpine
-            tags: "24-alpine krypton-alpine"
+            tags: "24-alpine krypton-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
     steps:
