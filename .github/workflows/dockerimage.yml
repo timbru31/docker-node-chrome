@@ -37,20 +37,36 @@ jobs:
           IMAGE_PATH="${{ matrix.node-version }}${VARIANT_PATH}"
           echo "Testing Node.js ${{ matrix.node-version }} (${{ matrix.variant }})"
 
-          # Run the container and execute the commands
-          OUTPUT=$(docker run -i $(docker build -q ${IMAGE_PATH}) /bin/sh -c "
+          # Create a container and run tests
+          CONTAINER_ID=$(docker create $(docker build -q ${IMAGE_PATH}) /bin/sh -c "
             node --version &&
             npm --version &&
             ${CHROMIUM_CMD} --version &&
-            ${CHROMIUM_CMD} --headless --no-sandbox --disable-gpu --screenshot https://www.whatsmybrowser.org/
+            ${CHROMIUM_CMD} --headless --no-sandbox --disable-gpu --screenshot=/tmp/screenshot.png https://www.whatsmybrowser.org/
           ")
+
+          docker start -a $CONTAINER_ID
+          OUTPUT=$(docker logs $CONTAINER_ID)
           echo "$OUTPUT"
+
+          # Copy screenshot from container
+          mkdir -p screenshots
+          docker cp $CONTAINER_ID:/tmp/screenshot.png screenshots/screenshot-node${{ matrix.node-version }}-${{ matrix.variant }}.png || true
+          docker rm $CONTAINER_ID
 
           # Validate Node.js version
           if ! echo "$OUTPUT" | grep -q "v${{ matrix.node-version }}"; then
             echo "::error::Expected Node.js v${{ matrix.node-version }} but got different version"
             exit 1
           fi
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: screenshots-node${{ matrix.node-version }}-${{ matrix.variant }}
+          path: screenshots/
+          if-no-files-found: ignore
 
   auto-merge:
     runs-on: ubuntu-latest
