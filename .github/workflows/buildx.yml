@@ -39,6 +39,18 @@ jobs:
             tags: "24-alpine krypton-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
+          - path: 26
+            tags: "26 lithium"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 26/slim
+            tags: "26-slim lithium-slim"
+            platforms: linux/amd64,linux/arm64
+
+          - path: 26/alpine
+            tags: "26-alpine lithium-alpine"
+            platforms: linux/amd64,linux/arm64
+
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
