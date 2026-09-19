@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  hadolint:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v7.0.1
