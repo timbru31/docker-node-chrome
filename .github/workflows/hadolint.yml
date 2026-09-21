@@ -3,14 +3,14 @@ name: Lint Dockerfiles
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 permissions:
   contents: read
 
 jobs:
-  build:
+  hadolint:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v7.0.1
