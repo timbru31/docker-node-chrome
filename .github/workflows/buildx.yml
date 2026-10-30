@@ -31,27 +31,27 @@ jobs:
             platforms: linux/amd64,linux/arm64
 
           - path: 24
-            tags: "24 krypton latest"
+            tags: "24 krypton"
             platforms: linux/amd64,linux/arm64
 
           - path: 24/slim
-            tags: "24-slim krypton-slim slim"
+            tags: "24-slim krypton-slim"
             platforms: linux/amd64,linux/arm64
 
           - path: 24/alpine
-            tags: "24-alpine krypton-alpine alpine"
+            tags: "24-alpine krypton-alpine"
             platforms: linux/amd64,linux/arm64
 
           - path: 26
-            tags: "26 lithium"
+            tags: "26 lithium latest"
             platforms: linux/amd64,linux/arm64
 
           - path: 26/slim
-            tags: "26-slim lithium-slim"
+            tags: "26-slim lithium-slim slim"
             platforms: linux/amd64,linux/arm64
 
           - path: 26/alpine
-            tags: "26-alpine lithium-alpine"
+            tags: "26-alpine lithium-alpine alpine"
             platforms: linux/amd64,linux/arm64
 
     steps:

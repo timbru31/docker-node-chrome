@@ -4,11 +4,11 @@
 [![buildx Status](https://github.com/timbru31/docker-node-chrome/workflows/buildx/badge.svg)](https://github.com/timbru31/docker-node-chrome/actions?query=workflow%3Abuildx)
 [![Lint Dockerfiles](https://github.com/timbru31/docker-node-chrome/workflows/Lint%20Dockerfiles/badge.svg)](https://github.com/timbru31/docker-node-chrome/actions?query=workflow%3A%22Lint+Dockerfiles%22)
 
-A minimal Dockerfile based on Node.js 22 LTS (Jod), Node.js 24 LTS (Krypton) or Node.js 26 (Lithium) branch (regular, slim or alpine) with the stable Chromium installed.
+A minimal Dockerfile based on Node.js 22 LTS (Jod), Node.js 24 LTS (Krypton) or Node.js 26 LTS (Lithium) branch (regular, slim or alpine) with the stable Chromium installed.
 
 ## What's included
 
-- Node.js 22 LTS (Jod), Node.js 24 LTS (Krypton) or Node.js 26 (Lithium)
+- Node.js 22 LTS (Jod), Node.js 24 LTS (Krypton) or Node.js 26 LTS (Lithium)
 - npm 10 (Node.js 22) / npm 11 (Node.js >=24)
 - yarn
 - Chromium stable
